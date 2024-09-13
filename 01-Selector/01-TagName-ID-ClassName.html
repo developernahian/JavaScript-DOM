@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--todo Get Elements By Tag Name -->
+    <!-- todo Get Elements By Id -->
+    <!-- todo Get Elements By Class Name -->
+
+    <header>
+        <h1>Welcome to my DOM</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis repudiandae id aut quaerat at hic consequuntur culpa quidem odio atque reprehenderit laboriosam natus voluptatum accusamus neque, expedita veritatis molestias deserunt.</p>
+    </header>
+
+    <main>
+        <section id="section-1">
+            <h1 id="section-1-title">Title of section 1</h1>
+            <ul>
+                <li class="section-1-li">(section1) item 1</li>
+                <li class="section-1-li">(section1) item 2</li>
+                <li class="section-1-li">(section1) item 3</li>
+                <li>(section1) item 4</li>
+            </ul>
+        </section>
+
+        <section id="section-2">
+            <h1 id="section-2-title">Title of section 2</h1>
+            <ul>
+                <li>(section2) item 1</li>
+                <li>(section2) item 2</li>
+                <li>(section2) item 3</li>
+                <li>(section2) item 4</li>
+            </ul>
+        </section>
+
+
+    </main>
+
+
+    <!-- <script src="script/dom.js"></script> -->
+    
+    <script>
+        // TODO: TagName
+        const liCollection = document.getElementsByTagName('li')
+        // console.log(liCollection);
+        for(const li of liCollection){
+            console.log(li);
+            console.log(li.innerText);
+        }
+        console.log('########################################');
+        
+
+        const allHeading = document.getElementsByTagName('h1')
+        // console.log(allHeading);
+
+        
+        // for (const h1 of allHeading){
+            // console.log(h1)
+        // }
+        // or
+        for (const heading of allHeading){
+            console.log(heading)
+            console.log(heading.innerText)
+        }
+
+        console.log('*******************************');
+        
+
+        //TODO: ID
+        const heading1 = document.getElementById('section-1-title')
+        console.log(heading1)
+        console.log(heading1.innerText)
+
+
+        console.log('################################');
+        
+        //TODO: Class
+        const sec1list = document.getElementsByClassName('section-1-li')
+        console.log(sec1list)
+        for(const li of sec1list){
+            // console.log(li)
+            console.log(li.innerText)
+        }
+
+        
+        
+
+/*
+document.getElementById("section-1-title")
+document.getElementById("section-1-title").innerText
+document.getElementById("section-1-title").innerText = 'new update title'
+*/
+
+        
+        </script>
+
+
+</body>
+</html>

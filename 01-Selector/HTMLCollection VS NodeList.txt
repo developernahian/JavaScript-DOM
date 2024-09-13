@@ -1,0 +1,51 @@
+/******************************
+ * HTMLCollection VS NodeList *
+ ******************************/
+
+
+HTMLCollection  VS   NodeList
+--------             --------  
+Dynamic              Stastic 
+for of               for of and for each
+
+
+
+Both HTMLCollection and NodeList are collections of DOM elements, but they have some key differences in behavior and functionality. Let’s explore them with definitions, examples, and explanations.
+
+
+1. HTMLCollection:
+------------------
+An HTMLCollection is a collection of DOM elements, typically returned by methods like getElementsByClassName, getElementsByTagName, and children. It's a live collection, meaning it automatically updates if the document changes (e.g., when elements are added or removed).
+
+
+2. NodeList:
+------------
+A NodeList is a collection of nodes (which can be elements, text nodes, comments, etc.) returned by methods like querySelectorAll, childNodes, and getElementsByName. A NodeList can be either live or static, but the most common NodeLists (like those returned by querySelectorAll) are static (they don't automatically update).
+
+
+
+ 
+Feature	              HTMLCollection                                    	NodeList
+--------------------------------------------------------------------------------------------------------------------------------------
+Returned by	     |   getElementsByClassName, getElementsByTagName  |     querySelectorAll, childNodes
+
+Type of nodes	 |   Only element nodes                         |   	Can be any node (element, text, comment)
+
+Live vs Static	 |   Live (updates automatically)               |     Usually Static (unless from childNodes)
+
+Array methods    |   Cannot use array methods directly          |     Can use forEach in modern browsers, but not other array methods
+
+Access elements	 |   Can access elements using index (boxes[0])	|      Can access elements using index (nodes[0])
+
+
+
+
+
+
+In Summary:
+------------
+* HTMLCollection is a live collection of element nodes only,
+  and it automatically updates when changes are made to the DOM.
+
+* NodeList is usually static (though it can be live in some cases like childNodes)
+  and can contain any type of node (not just elements).
