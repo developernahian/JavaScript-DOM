@@ -1,7 +1,8 @@
-Selector	                Method	                   Returns	        Live/Static    Usage
-ID selector	                getElementById()	       Single element   N/A	           Selects an element by its id
-Class selector              getElementsByClassName()   HTMLCollection   Live	       Selects elements by class name
-Tag name selector	        getElementsByTagName()     HTMLCollection	Live	       Selects elements by tag name
-CSS selector (first match)	querySelector()            Single element	Static	   Selects the first element matching the CSS selector
-CSS selector (all matches)	querySelectorAll()         NodeList	       Static      Selects all elements matching the CSS selector
-Name attribute selector 	getElementsByName()        NodeList	        Live	   Selects elements by name attribute
+Selector	                Method	                         Returns	      Live/Static    Usage
+-------------------------------------------------------------------------------------------------------
+ID selector	                getElementById()	           Single element    N/A	        Selects an element by its id
+Class selector                  getElementsByClassName()   HTMLCollection    Live	       Selects elements by class name
+Tag name selector	        getElementsByTagName()         HTMLCollection	 Live	       Selects elements by tag name
+CSS selector (first match)	querySelector()                Single element	 Static	    Selects the first element matching the CSS selector
+CSS selector (all matches)	querySelectorAll()             NodeList	         Static        Selects all elements matching the CSS selector
+Name attribute selector 	getElementsByName()            NodeList	         Live	       Selects elements by name attribute
