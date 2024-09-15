@@ -3,6 +3,46 @@
  ******************************/
 
 
+//Short summery start
+Here's a breakdown of the return types for each of the methods you listed:
+
+getElementsByTagName():   returns an HTMLCollection
+getElementById():         returns a single Element object (not a collection)
+getElementsByClassName(): returns an HTMLCollection
+querySelector():          returns a single Element object (not a collection)
+querySelectorAll():       returns a NodeList
+
+So, to summarize:
+
+
+HTMLCollection  VS   NodeList
+--------             --------  
+Dynamic              Stastic 
+for of               for of and for each
+
+
+HTMLCollection:
+---------------
+getElementsByTagName()
+getElementsByClassName()
+
+
+NodeList:
+---------
+querySelectorAll()
+Single Element object:
+getElementById()
+querySelector()
+
+
+Note that HTMLCollection and NodeList are both array-like objects, but they have some differences in terms of their behavior and the types of nodes they can contain, as I mentioned earlier.
+//Short summery end
+
+
+
+
+
+
 HTMLCollection  VS   NodeList
 --------             --------  
 Dynamic              Stastic 

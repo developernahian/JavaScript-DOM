@@ -10,6 +10,37 @@
     <!-- todo querySelector -->
      <!-- todo querySelectorAll -->
 
+<!--  
+Short summery start
+Here's a breakdown of the return types for each of the methods you listed:
+
+getElementsByTagName():   returns an HTMLCollection
+getElementById():         returns a single Element object (not a collection)
+getElementsByClassName(): returns an HTMLCollection
+querySelector():          returns a single Element object (not a collection)
+querySelectorAll():       returns a NodeList
+
+So, to summarize:
+
+HTMLCollection:
+---------------
+getElementsByTagName()
+getElementsByClassName()
+
+
+NodeList:
+---------
+querySelectorAll()
+Single Element object:
+getElementById()
+querySelector()
+
+
+Note that HTMLCollection and NodeList are both array-like objects, but they have some differences in terms of their behavior and the types of nodes they can contain, as I mentioned earlier.
+
+Short summery end
+-->
+
     <header>
         <h1 id="header-title">DOM</h1>
     </header>
@@ -24,10 +55,24 @@
             </ul>
         </section>
 
+
+        <section>
+            <h1>Initial Cars</h1>
+            <ul>
+                <li>BMW</li>
+                <li>Audi</li>
+                <li>Mercedes</li>
+                <li>Ford</li>
+            </ul>
+        </section>
+
     </main>
 
 
     <script>
+
+/*
+
 
         /*
         1. querySelector:
