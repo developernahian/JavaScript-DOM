@@ -51,7 +51,7 @@
             console.log(li);
             console.log(li.innerText);
         }
-        console.log('########################################');
+        console.log('################# TagName #######################');
         
 
         const allHeading = document.getElementsByTagName('h1')
@@ -67,16 +67,18 @@
             console.log(heading.innerText)
         }
 
-        console.log('*******************************');
+        console.log('*************** ID ****************');
         
 
         //TODO: ID
         const heading1 = document.getElementById('section-1-title')
         console.log(heading1)
-        console.log(heading1.innerText)
+        console.log(heading1.innerText)//output: Title of section 1
 
 
-        console.log('################################');
+    
+
+        console.log('############### Class #################');
         
         //TODO: Class
         const sec1list = document.getElementsByClassName('section-1-li')
@@ -85,6 +87,16 @@
             // console.log(li)
             console.log(li.innerText)
         }
+
+
+        
+
+        console.log('############### innerText update #################');
+        
+        const update = document.getElementById('section-2-title')
+        console.log(update.innerText);//output: Title of section 2
+        update.innerText = 'change title by javascript Update'
+        console.log(update.innerText);//output: change title by javascript Update
 
         
         

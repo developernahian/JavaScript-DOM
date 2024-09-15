@@ -24,46 +24,44 @@
             </ul>
         </section>
 
+    </main>
 
 
+    <script>
 
-        
-        <script>
+        /*
+        1. querySelector:
+        The querySelector method returns the first element that
+        matches a CSS selector within the document (or a specified element).
+        */
 
-            /*
-            1. querySelector:
-            The querySelector method returns the first element that
-            matches a CSS selector within the document (or a specified element).
-            */
-
-            const someList2 = document.querySelector('.fruits-list li')
-            console.log(someList2);//<li class="fruit">Apple</li>
-            console.log(someList2.innerText);//Apple
+        const someList2 = document.querySelector('.fruits-list li')
+        console.log(someList2);//<li class="fruit">Apple</li>
+        console.log(someList2.innerText);//Apple
 
 
 console.log("****************************************************");
+        /*
+        2. querySelectorAll:
+        The querySelectorAll method returns all elements that match a CSS selector as a static NodeList (which is similar to an array but not exactly an array).
+        */
+        const someList = document.querySelectorAll('#fruits-section li')//OR: fruits-list .fruit
+        console.log(someList);// [li.fruit, li.fruit, li.fruit, li.fruit]
+        for(const li of someList){
+            // console.log(li);
+            console.log(li.innerText);
+            
             /*
-            2. querySelectorAll:
-            The querySelectorAll method returns all elements that match a CSS selector as a static NodeList (which is similar to an array but not exactly an array).
+            Apple
+            Banana
+            Orange
+            Mango
             */
-            const someList = document.querySelectorAll('#fruits-section li')//OR: fruits-list .fruit
-            console.log(someList);// [li.fruit, li.fruit, li.fruit, li.fruit]
-            for(const li of someList){
-                // console.log(li);
-                console.log(li.innerText);
-                
-                /*
-                Apple
-                Banana
-                Orange
-                Mango
-                */
-                
-            }
+            
+        }
 
-        </script>
+    </script>
 
 
-    </main>
 </body>
 </html>
