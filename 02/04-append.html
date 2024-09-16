@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        section{
+            border: 5px solid #95a8e9;
+            background-color: blanchedalmond;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="header-title">DOM</h1>
+    </header>
+    <main id="main-container">
+
+
+        <section id="skill-container">
+            <h1 id="skill-title">Skill title</h1>
+            <ul id="skill-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JS</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <script>
+
+//-------------------------------------------------------
+        /*****************************
+         * add new list under the ul *
+         ***************************/
+
+        // 1. Where to add
+        const skillList = document.getElementById('skill-list');
+        console.log(skillList);
+        
+
+        // what to be added
+        const li = document.createElement('li');
+        li.innerText = 'Tailwind';
+
+        // 3. add the child
+        skillList.appendChild(li);// sppend korle ekhane Tailwind add hobe
+        // ekhane li taiwlind holo child and father holo ul skill-list
+
+
+
+
+
+
+
+
+//-------------------------------------------------------
+        /**********************
+         * CREATE NEW SECTION *
+         **********************/
+
+        // 1.where to add
+        const mainContainer = document.getElementById('main-container');
+
+        //2. what to be added
+        const section = document.createElement('section')
+        const h1 = document.createElement('h1');
+        h1.innerText = 'hello world';
+        section.appendChild(h1);
+
+        mainContainer.appendChild(section)
+
+        const ul = document.createElement('ul');
+        const li1 = document.createElement('li');
+        li1.innerText = 'hi1';
+        ul.appendChild(li1)
+        const li2 = document.createElement('li')
+        li2.innerText = 'hi2';
+        ul.appendChild(li2)
+        const li3 = document.createElement('li')
+        li3.innerText = 'hi3';
+        ul.appendChild(li3)
+
+        section.appendChild(ul)// ul e list add hobe
+
+
+
+        //OR OR  OR  OR OR OR shortcut given below
+
+        /********************************************
+         * ADD NEW SECTION USING INNERHTML DIRECTLE *
+         ********************************************/
+        const sectionPhone = document.createElement('section');
+        sectionPhone.innerHTML = `
+            <h1>Dress title</h1>
+            <ul>
+                <li>Samsung</li>
+                <li>Xioami</li>
+                <li>Apple</li>
+                <li>Nokia</li>
+            </ul>`
+
+        mainContainer.appendChild(sectionPhone)
+        // ekhane section ta chile and father holo mainContainer
+
+        
+
+
+        /*
+
+        */
+    </script>
+</body>
+</html>
