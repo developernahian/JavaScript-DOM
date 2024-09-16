@@ -51,7 +51,7 @@
 
         // 3. add the child
         skillList.appendChild(li);// sppend korle ekhane Tailwind add hobe
-        // ekhane li taiwlind holo child and father holo ul skill-list
+        // ekhane li taiwlind holo child and parent holo ul skill-list
 
 
 
@@ -97,17 +97,20 @@
          * ADD NEW SECTION USING INNERHTML DIRECTLE *
          ********************************************/
         const sectionPhone = document.createElement('section');
-        sectionPhone.innerHTML = `
+        sectionPhone.innerHTML =
+        `
             <h1>Dress title</h1>
             <ul>
                 <li>Samsung</li>
                 <li>Xioami</li>
                 <li>Apple</li>
                 <li>Nokia</li>
-            </ul>`
+            </ul>
+            `
+            // `` must use backTick,,, write html under backTick
 
         mainContainer.appendChild(sectionPhone)
-        // ekhane section ta chile and father holo mainContainer
+        // ekhane section ta chile and parent holo mainContainer
 
         
 

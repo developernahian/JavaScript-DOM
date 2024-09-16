@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- todo note most of the time option 2 ta use hobe -->
+     <!-- todo option 2 holo html e onclick er maddhome function call -->
+
+
+     
+    <!-- check console to see output after click on ClickMeButton -->
+    <h1 onclick="console.log('hello world')">DOM Events</h1>     <!-- not reocmmanded but use kora jai -->
+    <button onclick="console.log(7)">Click Me</button>
+    <button onclick="console.log(88)">Click Me</button>
+    <button onclick="console.log('must use single quote')">Click Me</button>
+
+
+    <br><br><br>
+    <!-- option: 1  not recommanded-->
+    <button onclick="document.body.style.backgroundColor = 'yellow'">Make Yellow</button>
+
+    <br><br><br><span>onclick using function call </span>
+    <!--IMPORTANT: option: 2 eta most of the time use hobe -->
+    <button onclick="makeRed()">Make Red</button>
+
+    <br><br><br><span>onclick using id: </span>
+    <!-- option: 3  Kom use hobe -->
+    <button id="make-blue">Make Blue</button>
+    <button id="make-green">Make Green</button>
+    <button id="make-purple">Make Purple</button>
+
+
+    <br><br><br><br><span>addEventListener using id:  </span>
+    <!-- option: 4 -->
+     <button id="make-pink">Make Pink</button>
+     <button id="make-brown">Make Brown</button>
+     <button id="make-aqua">Make Aqua</button>
+     <button id="make-goldenrod">Make GoldenRod</button>
+
+
+    <script>
+
+        // option: 1: directly set on the HTML element (not recommanded)
+        //html er moddhe  <button onclick="document.body.style.backgroundColor = 'yellow'">Make Yellow</button>
+
+
+        // option: 2: add onclick function on the html element
+        function makeRed(){
+            document.body.style.backgroundColor = 'red'
+        }
+
+        ///option: 3
+        const makeBlueButton = document.getElementById('make-blue')
+        console.log(makeBlueButton);
+        makeBlueButton.onclick = makeBlue
+        function makeBlue(){
+            document.body.style.backgroundColor = 'blue'
+        }
+
+        // option: 3 another way.1
+        //function keyword er por nam likheO hoy na likhleO hoy
+        const makeGreenButton = document.getElementById('make-green')
+        console.log(makeGreenButton);
+        makeGreenButton.onclick = function makeGreen(){
+            document.body.style.backgroundColor = 'green'
+        }
+        
+        //option: 3 another way.2
+        //OR same-- nam use kora and na kora same
+        //function keyword er por nam likheO hoy na likhleO hoy
+        const makePurpleButton = document.getElementById('make-purple')
+        console.log(makePurpleButton);
+        makePurpleButton.onclick = function(){
+            document.body.style.backgroundColor = 'purple'
+        }
+
+        
+
+        // option: 4
+        const makePinkButton = document.getElementById('make-pink')
+        makePinkButton.addEventListener('click', makePink)
+        function makePink(){
+            document.body.style.backgroundColor = 'pink'
+        }
+
+        //option: 4 another way.1
+        //function keyword er por nam likheO hoy na likhleO hoy
+        const makeBrownButton = document.getElementById('make-brown')
+        makeBrownButton.addEventListener('click', function makeBrown(){
+            document.body.style.backgroundColor = 'brown'
+        })    
+        //OR same-- nam use kora and na kora same
+        //output: 4: another way.2
+        //function keyword er por nam likheO hoy na likhleO hoy
+        const makeAquaButton = document.getElementById('make-aqua')
+        makeAquaButton.addEventListener('click', function(){
+            document.body.style.backgroundColor = 'aqua'
+        }) 
+
+
+        //option: 4 another way.3 FINAL
+        //IMPORTANT: we will use this sometimes
+        // document.getElementById('make-goldenrod').addEventListener('click', function(){})
+        document.getElementById('make-goldenrod').addEventListener('click', function (){
+            document.body.style.backgroundColor = 'goldenrod'
+        })
+
+    </script>
+
+</body>
+</html>
