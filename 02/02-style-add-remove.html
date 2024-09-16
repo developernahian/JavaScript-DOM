@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .custom-css-center{
+            /* yellow not working because of inline specificity by JS*/
+            /* !important use korle yellow apply hobe */
+            background-color: yellow;/* eta use hobe na*/
+            text-align: center;
+        }
+
+        .custom-css-large-text{
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="header-title">DOM</h1>
+    </header>
+    <main>
+        <section id="frouit-container">
+            <h1 id="fruit-title-id"  class="fruit-title-class red-class green-class">Fruit title</h1>
+            <ul class="fruits-list">
+                <li class="fruit">Apple</li>
+                <li class="fruit">Banana</li>
+                <li class="fruit">Orange</li>
+                <li class="fruit">Mango</li>
+            </ul>
+        </section>
+
+        <section id="flower-container">
+            <h1>Flower title</h1>
+            <ul>
+                <li>Rose</li>
+                <li>Tulip</li>
+                <li>Lily</li>
+                <li>Orchid</li>
+            </ul>
+        </section>
+
+
+
+        <section id="car-container" class="custom-css-large-text">
+            <h1>Car Title</h1>
+            <ul>
+                <li>BMW</li>
+                <li>Audi</li>
+                <li>Mercedes</li>
+                <li>Ford</li>
+            </ul>
+        </section>
+
+
+    </main>
+
+    <script>
+        const sections = document.querySelectorAll('section');
+        // console.log(sections);
+        for(const section of sections){
+            // console.log(section);
+            section.style.border = '2px solid red'
+            section.style.marginBottom = '10px'
+            section.style.borderRadius = '15px 30px 60px 10px'
+            section.style.paddingLeft = '20px'
+            section.style.backgroundColor = 'lightblue'
+            // section.style.backgroundImage = 'url(https://picsum.photos/200/300)'
+            // section.style.backgroundRepeat = 'no-repeat'
+            // section.style.backgroundPosition = 'center'
+            // section.style.backgroundSize = 'cover'
+        }
+
+
+
+
+        const carContainer = document.getElementById('car-container')
+        carContainer.style.backgroundColor = 'gray'
+        carContainer.classList.add('custom-css-center')
+        carContainer.classList.remove('custom-css-large-text')
+
+        
+        
+    </script>
+</body>
+</html>
