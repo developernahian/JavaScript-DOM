@@ -12,7 +12,7 @@
     </header>
     <main>
         <section id="fruits-section">
-            <h1 id="fruit-title">Initial Fruits</h1>
+            <h1 id="fruit-title-id"  class="fruit-title-class red-class green-class">Initial Fruits</h1>
             <ul class="fruits-list">
                 <li class="fruit">Apple</li>
                 <li class="fruit">Banana</li>
@@ -21,11 +21,95 @@
             </ul>
         </section>
 
+
+
+        <section class="car-section">
+            <h1>Car Title</h1>
+            <ul>
+                <li>BMW</li>
+                <li>Audi</li>
+                <li>Mercedes</li>
+                <li>Ford</li>
+            </ul>
+        </section>
+
+
     </main>
 
     <script>
 
-        
+/*
+document.getElementById("fruit-title-id").style
+
+document.getElementById("fruit-title-id").style.color = "red"
+
+document.getElementById("fruit-title-id").style.backgroundColor = "red"
+
+document.getElementById("fruit-title-id").style.textAlign= 'center'
+
+document.getElementById("fruit-title-id").style.border = '1px solid green'
+
+
+
+
+
+
+-------------getAttribute() and classList with add and remove-----------------------
+
+const title1 = document.getElementById('fruit-title-id')
+title1.getAttribute('id')
+//output: 'fruit-title'
+
+//// note class access pawar jonno id diye class check korte hobe
+const title2 = document.getElementById('fruit-title-id')
+title2.getAttribute('class')
+//output: 'fruit-title-class red-class green-class'
+//OR -------classList ------- 
+const title2 = document.getElementById('fruit-title-id')
+title2.classList
+output: DOMTokenList(3) ['fruit-title-class', 'red-class', 'green-class', value: 'fruit-title-class red-class green-class']
+//add class------
+title2.classList.add('add-class')//output: 'fruit-title-class red-class green-class add-class'
+//remove class------
+title2.classList.remove('green-class')//output: ekhane green-class romove hobe
+
+
+
+
+------------setAttribute()----------------
+const title333 = document.getElementById('fruit-title-id')
+title333.setAttribute('title', 'tooltipset by javascript')
+//must use title keyward under first bracket for set tooltip here
+
+*/
+    
+
+const title333 = document.getElementById('fruit-title-id')
+title333.setAttribute('title', 'tooltip set by javascript')
+
+
+
+
+
+/*
+index hisebe [0] kora hoyeche and innerHTML er jonne index use kora hoyeche.
+index na use korle kaz kore na. keno kaz kore na explor kora hoyni
+
+document.getElementsByClassName('car-section')
+document.getElementsByClassName('car-section')[0]
+document.getElementsByClassName('car-section')[0].innerHTML
+document.getElementsByClassName('car-section')[0].innerText
+document.getElementsByClassName('car-section')[0].innerHTML = '<h2>ABC DOM is Changing</h2>'
+
+innerHTML er content chenge kora hoyeche '' er moddhe
+
+
+
+//innerHTML e comment line show kore
+//innerText e comment line show kore na
+*/
+
+
 
     </script>
 
