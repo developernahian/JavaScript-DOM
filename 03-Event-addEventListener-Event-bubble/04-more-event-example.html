@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Explore More events</h1>
+
+    <input id="text-field" type="text">
+
+
+    <script>
+
+
+        document.getElementById('text-field').addEventListener('mouseenter', function(){
+            console.log('Event Triggered, mouse cursor input field e rakhlei kaz hobe, not need to click');
+        })
+
+
+
+        document.getElementById('text-field').addEventListener('click', function(){
+            console.log('Event Triggered, input field e click korlei kaz hobe');
+        })
+
+
+
+        document.getElementById('text-field').addEventListener('mousemove', function(){
+            console.log('Event Triggered, input field e mouse ta movement korlei kaz hobe');
+        })
+
+
+
+        document.getElementById('text-field').addEventListener('mouseleave', function(){
+            console.log('Event Triggered, input field theke mouse ta leave korlei kaz hobe');
+        })
+
+
+
+        document.getElementById('text-field').addEventListener('focus', function(){
+            console.log('Even Triggered inside the input field, input field e focus korlei kaz hoy. tobe input field e click korlei to focus hocche, just like click er moto. but onno jaigai hoyto onno vabe focus hote pare');
+        })
+
+
+
+        document.getElementById('text-field').addEventListener('blur', function(){
+            console.log('Even Triggered, input field e click korle to focus hoy, but input field theke ber howar por baka jaigai click kolei input field blur hoy, and blur holei kaz kore');
+        })
+
+
+    </script>
+</body>
+</html>
