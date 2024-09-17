@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Final DOM Event Handler</h1><br><br>
+
+    <!--TODO: option 1: onclick -->
+    <h3 id="handler-status1">Default Text</h3>
+    <button onclick="handleOnClick()">Handle Event by Add onclick Function</button>
+
+
+    <br><br><br>
+    <!--TODO: option 2: addEventListener -->
+    <h3 id="handler-status2">Default Text</h3>
+    <button id="event-listener">Handle event by addEventListener</button>
+
+    <br><br><br><br>
+    <!-- TODO: option 2: recap addEventListener (another exampla)-->
+     <p id="input-text-display">Default Text</p>
+    <input id="input-field" type="text">
+    <button id="btn-update">Update</button>
+
+
+
+
+
+    <script>
+        //TODO: option 1: onclick
+        function handleOnClick(){
+            // console.log();
+            const handlerStatus = document.getElementById('handler-status1');
+            handlerStatus.innerText = 'Handled by function attached on onclick attribute'
+        }
+
+
+
+
+        //TODO: option 2: addEventListener
+        document.getElementById('event-listener').addEventListener('click', function(){
+            const handlerStatus = document.getElementById('handler-status2');
+            handlerStatus.innerText = 'Text update by add Event listener button'
+        })
+
+
+        //TODO: option 2: addEventListener recap
+        document.getElementById('btn-update').addEventListener('click', function(){
+            // console.log('update button clicked');
+            const inputField = document.getElementById('input-field');
+            //console.log(inputField.value);//input field er text pete hole value keyword use korte hoy. ekhane innerText kaz kore na. eta Special case
+            const inputText = inputField.value
+
+
+            const p = document.getElementById('input-text-display');
+            p.innerText = inputText
+
+
+            inputField.value = ''
+            
+        })
+
+
+    </script>
+    
+</body>
+</html>

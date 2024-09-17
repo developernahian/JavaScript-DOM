@@ -1,2 +1,26 @@
-check important keyword
-total 2 important keyword
+/*****************************
+ *        FOR 01.HTML        *
+ *  CHECK IMPORTANT KEYWORD  *
+ * TOTAL 2 IMPORTANT KEYWORD *
+ *****************************/
+
+
+
+
+
+
+
+/******************************************************************
+ * DIFFERENCE BETWEEN ANONYMOUS AND NAMED FUNCTIONS IN JAVASCRIPT *
+ ******************************************************************/
+https://www.geeksforgeeks.org/difference-between-anonymous-and-named-functions-in-javascript/
+
+//Anonymous function
+function(){
+   // Function Body
+}
+
+//Named functions
+function displayMessage(){
+ // function..body
+}
