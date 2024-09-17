@@ -15,6 +15,20 @@
 
         //use opera or other browser. chrome er extension er konne devtool e click kaz kore na
 
+
+
+
+        //keypress, keydown  ei 2 tai vejal ache. so use keyup
+        // function() er moddhe event/evvvent/cat parameter pass korechi. chaile evvvent er jaigai hello, cal,event, evvent etc use korte pari. ei parameter ta variable er moto kaz kore
+        //function(event) or function(evvent) or fuction(cat) works same
+        document.getElementById('text-field').addEventListener('keyup', function(evvvent){
+            // console.log(event);
+            console.log(evvvent.target.value);// input: abc output: abc but output a er por ab tarpor abc
+        })
+
+
+
+
         document.getElementById('text-field').addEventListener('mouseenter', function(){
             console.log('Event Triggered, mouse cursor input field e rakhlei kaz hobe, not need to click');
         })
@@ -48,6 +62,8 @@
         document.getElementById('text-field').addEventListener('blur', function(){
             console.log('Even Triggered, input field e click korle to focus hoy, but input field theke ber howar por baka jaigai click kolei input field blur hoy, and blur holei kaz kore');
         })
+
+        
 
     </script>
 </body>
