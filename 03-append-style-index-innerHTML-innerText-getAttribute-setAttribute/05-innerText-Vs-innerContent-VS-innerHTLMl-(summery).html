@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #hh{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Hello <span>World</span></p>
+        <!-- comment line -->
+        
+        <p id="hh">This is hidden Text</p>
+
+    </div>
+
+        <script>
+
+            const container = document.querySelector('.container')
+
+            console.log(container.innerText)// inner text only browser e show kora content access korte pare
+            //Hello World
+            console.log(container.textContent)// textContent browser e show and hidden content gulo access gulo access korte pare
+            //Hello World
+            //This is hidden Text
+            console.log(container.innerHTML);// full html access korte pare
+            //    <p>Hello <span>World</span></p>
+            //  <!-- comment line -->
+            //    <p id="hh">This is hidden Text</p>
+
+        </script>
+
+
+</body>
+</html>
