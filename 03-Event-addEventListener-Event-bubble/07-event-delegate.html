@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- VLINK: https://javascript.info/event-delegation -->
+     <!-- M26-8 -->
+    <h1>Explore Event Delegate</h1>
+
+    <section>
+        <!-- ul#list-container>li.item*6>lorem3 -->
+        <ul id="list-container">
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Deleniti, saepe provident.</li>
+            <li class="item">Quas, atque commodi?</li>
+            <li class="item">Ut, obcaecati impedit.</li>
+            <li class="item">Laboriosam, rem ad.</li>
+            <li class="item">A, impedit ut!</li>
+        </ul>
+        <button id="btn-add-item">Add Item</button>
+    </section>
+
+    <script>
+        /*
+
+        const items = document.getElementsByClassName('item');
+        // console.log(items)
+        for(const item of items){
+            item.addEventListener('click', function(even){
+                // console.log(even.target);
+                // console.log(even.target.parentNode);
+                event.target.parentNode.removeChild(event.target)// jake click korbo take remove korbo. jake click korbo tar parent node gite tar akta child remove korbo, and kake romove korbo? jake click korechi take remove korbo
+
+            })
+        }
+            
+        */
+
+        //event re child er moddhe na rekhe parent er moddhe rekhe tarpor remove korle button click kore new add kore list delete kora jai upore comment kora code e event re child e rakha hoyeche tai ota comment kore ekhane parent er moddhe rekhe list delete korar kaz korechi
+        document.getElementById('list-container').addEventListener('click', function(even){
+            // console.log(event.target)
+            event.target.parentNode.removeChild(event.target)
+        })
+
+
+
+        document.getElementById('btn-add-item').addEventListener('click', function(){
+            const listContainer = document.getElementById('list-container');
+
+            const li = document.createElement('li');
+            li.innerText = 'Brand New Item added'
+            li.classList.add('item')
+            listContainer.appendChild(li)
+
+        })
+    </script>
+</body>
+</html>
