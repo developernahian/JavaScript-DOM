@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- daisyui and tailwind css link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <h1 class="text-center text-4xl mt-10 font-bold">Welcome To My Awesome Count App</h1>
+
+    <div class="text-center">
+        <h2 id="count" class="my-5 text-3xl font-bold">0</h2>
+        <button onclick="clickMe()" id="plus-btn" class="btn btn-success">+</button>
+        <button id="minus-btn" class="btn btn-primary">-</button>
+    </div>
+    <script src="./counter.js"></script>
+
+    <script>
+        //global variable
+        let sum = 0
+         
+        function clickMe(){
+            const h2 = document.getElementById('count')
+            sum += 1
+            h2.innerText = sum
+        }
+
+        const minusBtn = document.getElementById('minus-btn')
+        minusBtn.addEventListener('click', function(){
+            const h2 = document.getElementById('count')
+            sum -= 1
+            h2.innerText = sum
+        })
+    </script>
+</body>
+</html>

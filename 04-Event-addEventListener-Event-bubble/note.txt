@@ -6,6 +6,8 @@
 
 
 
+   IMPORTANT: addEventListener
+    <!-- todo addEventListener () 2 ta jinis likhte hoy prothomta event and secontd ta function call ba function -->
 
 
 
@@ -24,3 +26,5 @@ function(){
 function displayMessage(){
  // function..body
 }
+
+
