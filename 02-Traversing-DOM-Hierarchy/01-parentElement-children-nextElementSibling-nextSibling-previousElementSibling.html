@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            background-color: aquamarine;
+            margin: 10px;
+            font-size: 30px;
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="container3">
+        <li id="item1">Item 1</li>
+        <li id="item2">Item 2</li>
+        <li id="item3">Item 3</li>
+    </div>
+
+    <script>
+
+        const container2 = document.querySelector(".container3")
+        console.log(container2.childNodes)//NodeList(7) [text, li#item1, text, li#item2, text, li#item
+
+        console.log('------------------------------------------------------')
+        console.log('------- parentElement  children nextElementSibling previousElementSibling----------------------')
+
+        /*
+        parentElement
+        children
+        nextElementSibling
+        previousElementSibling
+        */
+        const item2 = document.getElementById('item2');
+        console.log(item2)//<li id="item2">…</li>
+
+        const parent = item2.parentElement// parent access
+        console.log(parent)//<div class="container3">…</div>
+
+        const parent2 = item2.parentElement.children//parent to children access
+        console.log(parent2)//[li#item1, li#item2, li#item3]
+        //HTMLCollection(3) [li#item1,li#item2,li#item3,]
+
+
+        //item2 er nextElementSibling access
+        const nextSibling = item2.nextElementSibling
+        console.log(nextSibling)//<li id="item3">…</li>
+
+        //item2 er previousElementSibling access
+        const prevSibling = item2.previousElementSibling
+        console.log(prevSibling)//<li id="item1">…</li>
+
+
+        
+        console.log('--------------nextElementSibling Vs nextSibling-------------------')
+        //DOMe node hisebe gele space re node hisebe count kore
+
+        //nextElementSibling Vs nextSibling
+        const nextElementSibling1 = item2.nextElementSibling
+        const nextSibling1 = item2.nextSibling
+        console.log(nextElementSibling1)//<li id="item3">…</li> // karon ekhane element/tag hisebe jacche
+        console.log(nextSibling1)// #text  // because ekhane space re count koreche. ekhane space er porei kintu tag.  nextElementSibling use korle tag gulo count korto
+
+    </script>
+</body>
+</html>

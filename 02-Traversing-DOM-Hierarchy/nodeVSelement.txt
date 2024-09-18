@@ -1,0 +1,33 @@
+node > comment text tag space soho sob count kore
+element > shudhu tag count kore
+
+
+
+**every element ak akta node but every node aka akta element na**
+
+
+Node:  tag, comment, space, text all count hoy
+----------------------------------------------
+* A Node is a more generic interface from which many DOM objects inherit. 
+
+* It can represent any type of object in the DOM tree: elements, text content, comments, etc.
+
+* Types of nodes include:
+        -Element (an HTML tag)
+        -Text (actual text inside an element)
+        -Comment (comments in HTML)
+        -Document (the entire document)
+
+* All objects that implement the Node interface can have properties like parentNode, childNodes, nodeType, and nodeValue.
+
+
+
+
+Element/Collection: tag gulo count hoy
+------------------------------------
+* An Element is a specific type of Node that represents an HTML element (e.g., <div>, <span>, <p>).
+
+* It inherits from the Node interface but has more specific properties and methods related to HTML
+  elements,such as getAttribute, setAttribute, innerHTML, classList, etc.
+
+* An Element can only represent an HTML or XML tag, not text or comment nodes.
