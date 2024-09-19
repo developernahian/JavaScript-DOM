@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- daisyui and tailwind css link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h2 class="text-3xl text-center font-bold my-6">
+          JavaScript Quote Generator 🔂
+        </h2>
+      </div>
+
+      <div class="main content">
+        <div class="card w-96 h-46 mx-auto shadow-2xl">
+          <div class="card-body">
+            <p id="quote-p">
+                Two things are infinite: the universe and human stupidity; and I'm
+              not sure about the universe.
+            </p>
+
+            <h2 id="name" class="person text-red-500">
+                Unknown
+            </h2>
+
+            <div class="card-actions justify-end">
+              <button id="quote" class="btn btn-outline btn-primary btn-xs">
+                New Quote
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+        //10 quotes index 0 to 9 in this array
+      const quotes = [
+        {
+          quote: "The only way to do great work is to love what you do.",
+          author: "Steve Jobs",
+        },
+        {
+          quote:
+            "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+          author: "Winston Churchill",
+        },
+        {
+          quote: "Believe you can and you're halfway there.",
+          author: "Theodore Roosevelt",
+        },
+        {
+          quote:
+            "Your time is limited, don't waste it living someone else's life.",
+          author: "Steve Jobs",
+        },
+        {
+          quote:
+            "I have not failed. I've just found 10,000 ways that won't work.",
+          author: "Thomas Edison",
+        },
+        {
+          quote: "Don't watch the clock; do what it does. Keep going.",
+          author: "Sam Levenson",
+        },
+        {
+          quote:
+            "Success usually comes to those who are too busy to be looking for it.",
+          author: "Henry David Thoreau",
+        },
+        {
+          quote: "You miss 100% of the shots you don't take.",
+          author: "Wayne Gretzky",
+        },
+        {
+          quote:
+            "The future belongs to those who believe in the beauty of their dreams.",
+          author: "Eleanor Roosevelt",
+        },
+        {
+          quote:
+            "Hardships often prepare ordinary people for an extraordinary destiny.",
+          author: "C.S. Lewis",
+        },
+      ];
+
+      document.getElementById("quote").addEventListener("click", function () {
+        const p = document.getElementById("quote-p");
+        const h1 = document.getElementById("name");
+        //Math.random return 0 to 0.9999 so we have to customize it
+        const randomIndex = Math.floor(Math.random() * quotes.length)//0 to 9
+        console.log(quotes[randomIndex])
+
+        p.innerText = quotes[randomIndex].quote
+        h1.innerText = quotes[randomIndex].author
+
+      });
+    </script>
+  </body>
+</html>
