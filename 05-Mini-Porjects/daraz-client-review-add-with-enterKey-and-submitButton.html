@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    
+
+    <h1 class="text-3xl text-center my-5 font-bold">🛍️ Daraz Lite Review 🛍️</h1>
+    <!-- main div start -->
+    <div class="w-[80%] text-center mx-auto mb-8">
+ 
+    <textarea id="text-area" class="textarea textarea-info w-96 h-36 border-2 text-xl" placeholder="leave a review.."></textarea>
+
+
+      <div class="text-end w-[45%] mx-auto">
+        <button id="submit-btn" class="btn btn-neutral btn-xl text-white">Submit</button>
+      </div>
+
+    </div>
+    <!-- main div end -->
+
+<!-- FIXME: user review class delete -->
+    <div id="review" class="user-review w-96 mx-auto">
+      <h1 class="text-3xl font-bold text-green-700">User Review...</h1>
+    </div>
+
+
+    <script>
+        let serialCount = 1
+
+        document.getElementById('submit-btn').addEventListener('click', function(){
+            const inputValue = document.getElementById('text-area').value
+            // console.log(inputValue.value)
+            //const inputMainValue = inputValue.value
+
+            const container = document.getElementById('review')
+
+            const p = document.createElement('p')
+            p.innerText = serialCount + ". " + inputValue
+            container.appendChild(p)
+
+            serialCount++
+
+            document.getElementById('text-area').value = ""
+        })
+
+
+
+        // keybaord event (keyboard er enter click korle review add hobe)
+        document.getElementById('text-area').addEventListener('keyup', function(event){
+
+            if(event.key === "Enter"){
+                const inputValue = document.getElementById('text-area').value
+                // console.log(inputValue.value)
+                //const inputMainValue = inputValue.value
+
+                const container = document.getElementById('review')
+
+                const p = document.createElement('p')
+                p.innerText = serialCount + ". " + inputValue
+                container.appendChild(p)
+
+                serialCount++
+
+                document.getElementById('text-area').value = ""
+
+            }
+
+        })
+
+
+
+        /*
+        //Same code using querySelector... uporer code e getElementById  use kora hoyeche
+        //querySelector e id ba class na thore direct tag re dhora hoy
+        //eta chara sob same ei code e
+
+        document.getElementById("text-area").addEventListener("keyup", function (event) {
+            if (event.key === "Enter") {
+                const inputValue = document.querySelector("textarea").value;
+                const container = document.getElementById("review");
+                const p = document.createElement("p");
+                p.innerText = serialCount + ". " + inputValue;
+                container.appendChild(p);
+                serialCount++;
+                document.querySelector("textarea").value = "";
+            }
+        });
+
+
+        */
+
+
+
+    </script>
+
+
+</body>
+</html>
